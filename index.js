@@ -43,14 +43,19 @@ concatNames = concatNames.concat(names[i] + " ");
 console.log(i, "Names concatenated", concatNames);
 }
 // Step 3: How do you access the last element of any array?
-console.log(ages[ages.length-1]);
+console.log("Last element of ages array:", ages[ages.length-1]);
 // Step 4: How do you access the first element of any array?
-
+console.log("Firse element of ages array:", ages[0]);
 // Step 5: Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 //    Example:
 //    let names = ["Kelly", "Sam", "Kate"];    // starting with this array
 //    let nameLengths = [5, 3, 4];             // create a new array
-
+let nameLengths = [];
+for (let i = 0; i < names.length; i++) {
+    //console.log(i, "test");
+    nameLengths.push(names[i].length);
+    console.log("Same lengths array:", nameLengths);
+}
 // Step 6: Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
 
 // Step 7: Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
