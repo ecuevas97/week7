@@ -54,18 +54,52 @@ let nameLengths = [];
 for (let i = 0; i < names.length; i++) {
     //console.log(i, "test");
     nameLengths.push(names[i].length);
-    console.log("Same lengths array:", nameLengths);
+    console.log("Name lengths array:", nameLengths);
 }
 // Step 6: Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array.
-
+let charsTotal = 0;
+for (let i = 0; i < nameLengths.length; i++){
+   // console.log(i, "test")
+charsTotal += nameLengths[i]
+console.log("CharsTotal:", charsTotal);
+}
 // Step 7: Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. 
 //    (i.e. if I pass in 'Hello' and 3, I would expect the function to return 'HelloHelloHello').
-
+function concatWords(word, n) {
+console.log("Word Par:", word, "n Par:", n);
+let concat = word.repeat(n);
+console.log(concat);
+}
+concatWords("Hello", 3);
 // Step 8: Write a function that takes two parameters, firstName and lastName, and returns a full name. 
 //    The full name should be the first and the last name separated by a space.
-
+function fullName(firstName,lastName){
+    let fullName = firstName+ " " + lastName
+    console.log(fullName)
+}
+fullName("Elena", "Cuevas")
 // Step 9: Write a function that takes an array of numbers and returns true if the sum of all the numbers in the array is greater than 100.
+let numbers1 = [100,200,300,400]
+let numbers2 = [1,2,3,4]
 
+function sumNumbersArray(array){
+    let total = 0;
+
+    for (let i = 0; i< array.length; i++) {
+       // console.log(i,"Test");
+    total += array [i]
+    console.log("total:", total);
+  }
+  
+  if (total > 100){
+    console.log("Total:",total,true);
+    return true
+ } else {
+    console.log("Total:",total,false);
+    return false
+ }
+}
+sumNumbersArray(numbers1);
 // Step 10: Write a function that takes an array of numbers and returns the average of all the elements in the array.
 
 // Step 11: Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
