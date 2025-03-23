@@ -34,7 +34,7 @@ for (let i = 0; i < names.length; i++) {
     console.log("index:",i, "name:", names[i], "totalChars:", totalChars);
     }
 let averageName = totalChars / names.length
-console.log("Average of NAmes:", averageName);
+console.log("Average of Names:", averageName);
 
 // Step 2b: Use a loop to iterate through the array again and concatenate all the names together, separated by spaces.
 let concatNames = "";
@@ -100,10 +100,72 @@ function sumNumbersArray(array){
  }
 }
 sumNumbersArray(numbers1);
+
 // Step 10: Write a function that takes an array of numbers and returns the average of all the elements in the array.
+function calculateNumbersAverage(array){
+    let total = 0;
+    for(let i = 0; i < array.length; i++) {
+        //console.log(i, "Test");
+        total += array[i]
+        console.log("calculate function, total:", total);
+    }
+    
+    let average = total / array.length
+    console.log("Average of numbers:", average);
+    return average;
+}
+calculateNumbersAverage(numbers1);
 
 // Step 11: Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+let numbers3 = [100, 100, 100, 50];
+let numbers4 = [100, 100, 100];
+
+function twoAverages(array1,array2) {
+    console.log("Parameters:", array1, array2);
+    let total1 = 0;
+    let total2 = 0;
+for (const number of array1) {
+    total1 += number;
+    console.log("Current number loop1:", number, "Total1:",total1);
+  }
+for (const number of array2) {
+     total2 += number;
+     console.log("Current number loop2:", number, "Total2:",total2);
+  }
+let average1 = total1 / array1.length;
+let average2 = total2 / array2.length;
+console.log("Averages", average1, average2);
+
+if (average1 > average2) {
+    console.log(true);
+    return true
+} else if (average1 < average2) {
+    console.log(false);
+    return false
+} else {
+    console.log("Numbers are equal");
+ }
+
+}
+
+twoAverages(numbers3,numbers4);
 
 // Step 12: Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
+function willBuyDrink(isHotOutside, moneyInPocket){
+    console.log("Parameters", isHotOutside, moneyInPocket);
+    let buyDrink = isHotOutside === true && moneyInPocket > 10.5;
+    console.log("Buy a drink?", buyDrink);
+    return buyDrink
+}
 
+willBuyDrink(true, 5);
 // Step 13: Create a function of your own that solves a problem. In comments, write what the function does and why you created it.
+
+//creating a function called canBuyDrink that takes a boolean isOfAge, and returns true "can buy drink" if the person is of legal age. Thought of doing so because it's applicable in the real world.
+// function determines whether a person is of legal age to buy a drink. param {boolean} isOfAge - A boolean value indicating whether the person is of legal age
+function canBuyDrink(isOfAge) {
+   // returns {boolean} - True if the person is of legal age, False otherwise.
+    return isOfAge;
+}
+console.log(canBuyDrink(true));   // Output: true (person is of legal age)
+console.log(canBuyDrink(false));  // Output: false (person is not of legal age)
